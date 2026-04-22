@@ -6,6 +6,11 @@ Normalization will be used to reduce redundacy and denomalization will be utiliz
 Indexes are used to speed up queries but they will be used in moderation to avoid slowing down the system
 The business logic will be embedded to the db via functions
 
+### Perfomance and Storage Considerations
+Caching mechanisms will be applied in order to ensure faster data transfer within the db
+Indexes will also be fine tuned to enhance perfomance further
+For large tables table partitioning will be used to make queries faster
+
 ## Starting the system
 ### To start the system
 To create an executable for the system use this commands
