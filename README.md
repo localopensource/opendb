@@ -1,5 +1,6 @@
 # opendb
 ## This is a database that is aimed to handle transactional workloads (OLTP)
+The system will be designed such that it handles concurrent users using mechanisms such as locking, connection pooling and transaction management
 ### Schema and Data modelling
 The system will accept one to one, one to many and many to many types of relationship.
 Normalization will be used to reduce redundacy and denomalization will be utilized to optimize perfomance for heavy workloads.
