@@ -1,5 +1,5 @@
 # opendb
-## This is a database that is aimed to handle transactional workloads (OLTP)
+## This is a database that is aimed to handle transactional workloads (OLTP == Online Transaction Process)
 The system will be designed such that it handles concurrent users using mechanisms such as locking, connection pooling and transaction management
 ### Schema and Data modelling
 The system will accept one to one, one to many and many to many types of relationship.
