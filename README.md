@@ -11,6 +11,20 @@ Caching mechanisms will be applied in order to ensure faster data transfer withi
 Indexes will also be fine tuned to enhance perfomance further
 For large tables table partitioning will be used to make queries faster
 
+### Transaction Handling
+The database should ensure that all the ACID principles are followed with a logical replication for high availability
+
+### Backup, Recovery and Fault Tolerance
+Regular backups will be schedules in to the system. On top of that write ahead logs will be utilized so as to ensure a point in time recovery is possible.
+
+### Security and Access Control
+To keep user data secure principle of least privilege will be used with separate read only and read write roles.
+SSL/ TLS will be used to encrypt data at rest.
+Logging will be enabled for user access and sensitive operations for compliance and monitoring
+
+### monitoring and maintainability
+Perfomance logging will be used so as to detect issues early with regular updates so as to correct them.
+
 ## Starting the system
 ### To start the system
 To create an executable for the system use this commands
