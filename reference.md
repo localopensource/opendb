@@ -20,3 +20,7 @@ __________________________
 In order to store data in a sorted order in memory we use effective tree data structures where writes can be in any order but read will be sequestial eg AVL trees or Red Black trees which maintain data in a sorted order. The in memory trees is called a ```memtable```. When it exceed a certain threshold typically a few megabytes, it is written out to disk as an SSTable files and the SSTable becomes the most recent segment of the database while being written out to disk writes can continue to a new memory instance.
 * To serve a read request, we find the key in the memtable, then in the most recent segment, and subsequently in the next older segment and so on
 * In the event of a database crash, the most recent writes will be lost. To mitigate this, we can keep a separate log on disk to which every write is immediately appended. Every time the memtable is written out to an SSTable, the corresponding log can be discard
+### merging segments in the structure is straight forward and it resembles merge sort.
+* ie take your segments and initially select keys in sorted order eg alphabetical. Then retrieve the latest value of each key from within the selected segments and write it to the new merged segment. Repeat this process for all the keys
+
+```Reading in LSM trees is very easy, you do not have the keys for all the data in memory, you have something like range offset table```
