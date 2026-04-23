@@ -14,8 +14,7 @@ ____________________________
 
 
 __________________________
-|                         |
-| SSTABLES AND LSM TREES  |                  |
-|_________________________|
+    SSTABLES AND LSM TREES  
+
 * sorts the data with respect to keys ie maintains an in-memory sorted log file that stores, writes and after reeaching a certain point sends the data to the disk in sorted order.
 In order to store data in a 
