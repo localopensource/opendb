@@ -17,4 +17,4 @@ __________________________
     SSTABLES AND LSM TREES  
 
 * sorts the data with respect to keys ie maintains an in-memory sorted log file that stores, writes and after reeaching a certain point sends the data to the disk in sorted order.
-In order to store data in a 
+In order to store data in a sorted order in memory we use effective tree data structures where writes can be in any order but read will be sequestial eg AVL trees or Red Black trees which maintain data in a sorted order. The in memory trees is called a ```memtable```. When it exceed a certain threshold typically a few megabytes, it is written out to disk as an SSTable files and the SSTable becomes the most recent segment of the database while being written out to disk writes can continue to a new memory instance.
